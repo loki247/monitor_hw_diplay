@@ -1,4 +1,3 @@
-//Ejemplo para enviar mensajes deslizantes en módulos de matrices LEDs con Arduino basado en MAX7219
 #include <MD_MAX72xx.h>
 
 #define HARDWARE_TYPE MD_MAX72XX::DR0CR0RR1_HW
@@ -34,38 +33,9 @@ void loop() {
     char charVal[stringVal.length() + 1];                      //initialise character array to store the values
     stringVal.toCharArray(charVal , stringVal.length() + 1);     //passing the value of the string to the character array
    
-  
     mensaje = stringVal + "";
     
     slide_text(30);
-    //actualizar_mensaje(); 
-  }
-}
-
-long getDecimal(float val){
-  int intPart = int(val);
-  long decPart = 10 *(val-intPart); //I am multiplying by 1000 assuming that the foat values will have a maximum of 3 decimal places
-                                   //Change to match the number of decimal places you need
-  if(decPart>0){
-    return(decPart);           //return the decimal part of float number if it is available 
-  }else if(decPart<0){
-    return((-1)*decPart); //if negative, multiply by -1
-  }else if(decPart=0){
-    return(00);           //return 0 if decimal part of float number is not available
-  }
-}
-
-void actualizar_mensaje(){
-  while( Serial.available() ){
-    char c = Serial.read();
-
-    if( c == '\n' ){
-      mensaje = proximo_mensaje;
-      proximo_mensaje = "";
-      break;
-    }else{
-      proximo_mensaje += c;
-    }
   }
 }
 
