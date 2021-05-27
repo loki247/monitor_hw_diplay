@@ -2,7 +2,7 @@
 #include <MD_MAX72xx.h>
 
 #define HARDWARE_TYPE MD_MAX72XX::DR0CR0RR1_HW
-#define NUM_OF_MATRIX 2
+#define NUM_OF_MATRIX 3
 #define CLK_PIN   6
 #define DATA_PIN  7
 #define CS_PIN    5
