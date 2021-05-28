@@ -17,7 +17,7 @@ if (!$fp) {
     $clock_c2 = "CORE 2: " . $obj['Children'][0]['Children'][1]['Children'][0]['Children'][2]['Value'];
     $clock_c3 = "CORE 3: " . $obj['Children'][0]['Children'][1]['Children'][0]['Children'][3]['Value'];
     $clock_c4 = "CORE 4: " . $obj['Children'][0]['Children'][1]['Children'][0]['Children'][4]['Value'];
-    $clocks_cpu = $clock_c1 . " | " . $clock_c2 . " | " . $clock_c3 . " | " . $clock_c4;
+    $clocks_cpu = $clock_c1 . "          " . $clock_c2 . "          " . $clock_c3 . "          " . $clock_c4;
     $carga_cpu = "LOAD: " . $obj['Children'][0]['Children'][1]['Children'][2]['Children'][0]['Value'];
 
 
@@ -25,9 +25,9 @@ if (!$fp) {
     $temp_gpu = "TEMP: " . $obj['Children'][0]['Children'][3]['Children'][1]['Children'][0]['Value'];
     $carga_gpu = "LOAD: " . $obj['Children'][0]['Children'][3]['Children'][2]['Children'][0]['Value'];
 
-    $uso_ram = "RAM: " . str_replace("GB", "", $obj['Children'][0]['Children'][2]['Children'][1]['Children'][0]['Value']) . "/16 GB";
+    $uso_ram = "RAM: " . str_replace("GB", "", $obj['Children'][0]['Children'][2]['Children'][1]['Children'][0]['Value']) . "/ 16 GB";
 
-    $texto_final = strtoupper($nombre_cpu . " | " . $temp_cpu . " | " . $clocks_cpu . " | " . $carga_cpu . " | " . $nombre_gpu . " | " . $temp_gpu . " | " . $carga_gpu . " | " . $uso_ram);
+    $texto_final = strtoupper($nombre_cpu . "          " . $temp_cpu . "          " . $clocks_cpu . "          " . $carga_cpu . "          " . $nombre_gpu . "          " . $temp_gpu . "          " . $carga_gpu . "          " . $uso_ram);
         
     sleep(10);
     fwrite($fp, $texto_final);

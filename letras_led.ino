@@ -35,7 +35,7 @@ void loop() {
    
     mensaje = stringVal + "";
     
-    slide_text(30);
+    slide_text(25);
   }
 }
 
