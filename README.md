@@ -64,25 +64,25 @@ En las lineas anterior se debe cambiar el <strong>COM3</strong> por el puerto qu
 
 Ir al Programador de Tareas de Windows y hacer click en <strong>Crear tarea básica</strong>
 
-<img src="capturas/04.png">
+<img src="capturas/04.PNG">
 
 Escoger el nombre que deseen y siguiente.
 
-<img src="capturas/05.png">
+<img src="capturas/05.PNG">
 
 Escoger la opción <strong>Al iniciar sesión</strong> y siguiente.
 
-<img src="capturas/06.png">
+<img src="capturas/06.PNG">
 
 Escoger la opción <strong>Iniciar un programa</strong> y siguiente.
 
-<img src="capturas/07.png">
+<img src="capturas/07.PNG">
 
 Presionar el boton Examinar y buscar dentro de la carpeta el archivo <strong>script_sin_ventana.vbs</strong> y siguiente. En el siguiente paso hace click en finalizar.
 
 Después ir a la tarea creada y hacer click en propiedades. En pestaña desencadenadores editar la opción <strong>Al iniciar la sesión</strong> y desactivar la opción <strong>Repetir cada</strong> y agregar un nuevo desencadenador.
 
-<img src="capturas/08.png">
+<img src="capturas/08.PNG">
 
 En <strong>Iniciar la tarea</strong> seleccionar la opción <strong>Según una programación</strong>. Marcar la opción <strong>Repetir cada</strong> y escribir en el campo de la derecha <strong>1 minuto</strong> y en el campo <strong>durante</strong> seleccionar la opción <strong>Indefinidamente</strong>.
 
