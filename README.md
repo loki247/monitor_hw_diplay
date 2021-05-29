@@ -54,7 +54,7 @@ Esto es solo para cambiar la cantidad de matrices a usar modificar solo el valor
 <code>
 	exec("C:\Windows\System32\mode.com COM3 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
 </code>
-
+--------------------------
 <code>
 	$fp = fopen("com3", "w");
 </code>
