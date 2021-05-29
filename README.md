@@ -15,4 +15,8 @@ Monitor de Hardware Arduino utilizando OpenHardware Monitor y algunos script los
 
 <strong>Configuración:</strong>
 
+<h3>1.- Configurar OpenHardware Monitor</h3>
 
+Primero se debe configurar el software para que este se inicie junto con Windows. Marcar las opciones que aparecen en la imagen.
+
+<img src="capturas/01.png">
