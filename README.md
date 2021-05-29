@@ -61,7 +61,7 @@ Esto es solo para cambiar la cantidad de matrices a usar modificar solo el valor
 	$fp = fopen("com3", "w");
 </code>
 
-En las lineas anterior se debe cambiar el <strong>COM3</strong> por el puerto que esté utilizando el arduino
+En las lineas anteriores se debe cambiar el <strong>COM3</strong> por el puerto que esté utilizando el arduino
 
 
 <h3>4.- Crear Tarea Programada</h3>
