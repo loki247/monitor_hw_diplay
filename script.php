@@ -22,12 +22,13 @@ if (!$fp) {
 
 
     $nombre_gpu = str_replace("NVIDIA NVIDIA", "NVIDIA", $obj['Children'][0]['Children'][3]['Text']);
+    $vram_gpu = $obj['Children'][0]['Children'][3]['Children'][5]['Children'][2]['Value'];
     $temp_gpu = "TEMP: " . $obj['Children'][0]['Children'][3]['Children'][1]['Children'][0]['Value'];
     $carga_gpu = "LOAD: " . $obj['Children'][0]['Children'][3]['Children'][2]['Children'][0]['Value'];
 
     $uso_ram = "RAM: " . str_replace("GB", "", $obj['Children'][0]['Children'][2]['Children'][1]['Children'][0]['Value']) . "/ 16 GB";
 
-    $texto_final = strtoupper($nombre_cpu . "          " . $temp_cpu . "          " . $clocks_cpu . "          " . $carga_cpu . "          " . $nombre_gpu . "          " . $temp_gpu . "          " . $carga_gpu . "          " . $uso_ram);
+    $texto_final = strtoupper($nombre_cpu . "          " . $temp_cpu . "          " . $clocks_cpu . "          " . $carga_cpu . "          " . $nombre_gpu . " " . (floatval($vram_gpu)/1024) . " GB          " . $temp_gpu . "          " . $carga_gpu . "          " . $uso_ram);
         
     sleep(10);
     fwrite($fp, $texto_final);
