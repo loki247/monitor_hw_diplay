@@ -13,10 +13,10 @@ if (!$fp) {
 
     $nombre_cpu = $obj['Children'][0]['Children'][1]['Text'];
     $temp_cpu = "TEMP: " . $obj['Children'][0]['Children'][1]['Children'][1]['Children'][1]['Value'];
-    $clock_c1 = "CORE 1: " . $obj['Children'][0]['Children'][1]['Children'][0]['Children'][1]['Value'];
-    $clock_c2 = "CORE 2: " . $obj['Children'][0]['Children'][1]['Children'][0]['Children'][2]['Value'];
-    $clock_c3 = "CORE 3: " . $obj['Children'][0]['Children'][1]['Children'][0]['Children'][3]['Value'];
-    $clock_c4 = "CORE 4: " . $obj['Children'][0]['Children'][1]['Children'][0]['Children'][4]['Value'];
+    $clock_c1 = "CORE 1: " . round((floatval(str_replace("MHz", "" , $obj['Children'][0]['Children'][1]['Children'][0]['Children'][1]['Value']))/1000), 2) . " GHz";
+    $clock_c2 = "CORE 2: " . round((floatval(str_replace("MHz", "" , $obj['Children'][0]['Children'][1]['Children'][0]['Children'][2]['Value']))/1000), 2) . " GHz";
+    $clock_c3 = "CORE 3: " . round((floatval(str_replace("MHz", "" , $obj['Children'][0]['Children'][1]['Children'][0]['Children'][3]['Value']))/1000), 2) . " GHz";
+    $clock_c4 = "CORE 4: " . round((floatval(str_replace("MHz", "" , $obj['Children'][0]['Children'][1]['Children'][0]['Children'][4]['Value']))/1000), 2) . " GHz";
     $clocks_cpu = $clock_c1 . "          " . $clock_c2 . "          " . $clock_c3 . "          " . $clock_c4;
     $carga_cpu = "LOAD: " . $obj['Children'][0]['Children'][1]['Children'][2]['Children'][0]['Value'];
 
